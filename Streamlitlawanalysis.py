@@ -11,9 +11,15 @@ def main():
     st.text_input("What do you want to know?")
 
     with st.sidebar:
-        st.subheader("PDFs go here")
-        st.file_uploader("Upload your PDFs here and click on Process") # change the subheader to match what I need 
-        st.button("Process")
+        pdf_docs = st.subheader("PDFs go here")
+        st.file_uploader("Upload your PDFs here and click on Process", accept_multiple_files=True) # change the subheader to match what I need 
+        if st.button("Process"):
+            with st.spinner("Processing"):
+                #get pdf text
+                
+                #get the text chunks
+
+                #create vector store
 
 
 if __name__ == '__main__':
